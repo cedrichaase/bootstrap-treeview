@@ -32,6 +32,7 @@
 		injectStyle: true,
 
 		levels: 2,
+		selectRequired: false,
 
 		expandIcon: 'glyphicon glyphicon-plus',
 		collapseIcon: 'glyphicon glyphicon-minus',
@@ -336,7 +337,11 @@
 		else {
 			
 			if (node.selectable) {
-				this.toggleSelectedState(node, _default.options);
+				if(node.state.selected && this.options.selectRequired) {
+					return;
+				} else {
+					this.toggleSelectedState(node, _default.options);
+				}
 			} else {
 				this.toggleExpandedState(node, _default.options);
 			}
