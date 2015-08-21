@@ -297,6 +297,12 @@ Boolean.  Default: true
 
 Whether or not to highlight the selected node.
 
+#### selectRequired
+
+Boolean. Default: false
+
+Whether or not a selection cannot be undone by clicking it again.
+
 #### levels
 Integer. Default: 2
 
